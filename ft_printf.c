@@ -50,7 +50,7 @@ int			ft_printf(const char *restrict format, ...)
 			written += write(1, &format[i], 1);
 		else
 		{
-			spec = get_spec(&format[++i], ap);
+			spec = get_spec((char *)&format[++i], ap);
 			written += print_conv(spec, ap);
 			while (format[i] != spec.type)
 				i++;

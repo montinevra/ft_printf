@@ -44,7 +44,7 @@ typedef	struct	s_spec
 }				t_spec;
 
 int				ft_printf(const char *restrict format, ...);
-t_spec			get_spec(const char *s, va_list ap);
+t_spec			get_spec(char *s, va_list ap);
 size_t			print_int(t_spec spec, va_list ap);
 size_t			print_str(t_spec spec, char *converted);
 size_t			print_char(t_spec spec, int c);
