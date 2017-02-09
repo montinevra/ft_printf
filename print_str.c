@@ -6,7 +6,7 @@
 /*   By: pvan-erp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/07 18:50:13 by pvan-erp          #+#    #+#             */
-/*   Updated: 2017/02/07 18:50:15 by pvan-erp         ###   ########.fr       */
+/*   Updated: 2017/02/08 20:00:11 by pvan-erp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ size_t		print_char(t_spec spec, int c)
 	written = ft_strlen(converted);
 	if ((spec.type == 'c' || spec.type == 'C') && c == '\0')
 	{
+		ft_putchar('\0');
 		ft_putstr(converted + ft_strlen(converted) + 1);
 		written += ft_strlen(converted + ft_strlen(converted) + 1) + 1;
 	}
